@@ -117,6 +117,12 @@ func TestParseFrame(t *testing.T) {
 	assertions["1-0:1.8.1"] = "000093.179"
 	assertions["1-0:1.8.2"] = "000056.684"
 	assertions["0-1:24.2.1"] = "01024.212"
+	assertions["1-0:32.36.0"] = "00000"
+	assertions["1-0:52.36.0"] = "00000"
+	assertions["1-0:72.36.0"] = "00000"
+	assertions["1-0:32.32.0"] = "00006"
+	assertions["1-0:52.32.0"] = "00007"
+	assertions["1-0:72.32.0"] = "00005"
 
 	for id, want := range assertions {
 		dataObject, exists := f.Objects[id]

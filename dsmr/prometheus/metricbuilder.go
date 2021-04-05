@@ -232,7 +232,7 @@ var metricBuilders = map[string]MetricBuilder{
 	},
 	// Number of voltage sags in phase L3 (polyphase meters only)
 	// 1-0:72:32.0.255 2 Value 1 Data F5(0,0), tag 18
-	"1-0:72:32.0": MetricBuilder{
+	"1-0:72.32.0": MetricBuilder{
 		ValueType: prometheus.CounterValue,
 		Desc: prometheus.NewDesc(
 			namespace+"_voltage_sags_in_phase_l3_total",
