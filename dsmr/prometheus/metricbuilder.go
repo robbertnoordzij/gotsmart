@@ -394,6 +394,39 @@ var metricBuilders = map[string]MetricBuilder{
 		),
 		Unit: "kW",
 	},
+	// Voltage in phase L1 1-0:32.7.0
+	"1-0:32.7.0": MetricBuilder{
+		ValueType: prometheus.GaugeValue,
+		Desc: prometheus.NewDesc(
+			namespace+"_voltage_l1_v",
+			"voltage in phase l1",
+			defaultLabels,
+			prometheus.Labels{},
+		),
+		Unit: "V",
+	},
+	// Voltage in phase L2 1-0:52.7.0
+	"1-0:52.7.0": MetricBuilder{
+		ValueType: prometheus.GaugeValue,
+		Desc: prometheus.NewDesc(
+			namespace+"_voltage_l2_v",
+			"voltage in phase l2",
+			defaultLabels,
+			prometheus.Labels{},
+		),
+		Unit: "V",
+	},
+	// Voltage in phase L3 1-0:72.7.0
+	"1-0:72.7.0": MetricBuilder{
+		ValueType: prometheus.GaugeValue,
+		Desc: prometheus.NewDesc(
+			namespace+"_voltage_l3_v",
+			"voltage in phase l3",
+			defaultLabels,
+			prometheus.Labels{},
+		),
+		Unit: "V",
+	},
 
 	// TODO The types below are Smart Meter extensions like Gas meter, etc.
 
